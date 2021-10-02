@@ -17,10 +17,10 @@ const validate = (schema: AnySchema) => async (
         });
 
         return next();
-    } catch (error: any)
+    } catch (e: any)
     {
-        log.error(error);
-        return res.status(400).send(error.errors);
+        log.error(e);
+        return res.status(400).send(e.errors);
     }
 };
 

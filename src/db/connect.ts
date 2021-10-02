@@ -10,11 +10,11 @@ function connect()
         .connect(dbUri, {})
         .then(() =>
         {
-            log.info("Database connected");
+            log.info("Hospital database connected");
         })
         .catch((error) =>
         {
-            log.error("db error", error);
+            log.error("Database error", error);
             process.exit(1);
         });
 }
