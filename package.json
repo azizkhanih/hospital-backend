@@ -1,0 +1,20 @@
+{
+  "name": "hospital-backend",
+  "version": "0.0.1",
+  "description": "hospital department management",
+  "main": "server.js",
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "rest",
+    "api"
+  ],
+  "author": "h.azizkhani",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --config nodemon.json src/app.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
