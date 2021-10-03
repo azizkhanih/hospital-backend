@@ -46,7 +46,7 @@ export default function (app: Express)
     app.delete("/api/sessions", requiresUser, invalidateUserSessionHandler);
 
     // Get a departments
-    app.get("/api/departments", getDepartmentsHandler);
+    app.get("/api/departments", requiresUser, getDepartmentsHandler);
 
     // Create a department
     app.post(
@@ -63,7 +63,7 @@ export default function (app: Express)
     );
 
     // Get a department
-    app.get("/api/departments/:departmentId", getDepartmentHandler);
+    app.get("/api/departments/:departmentId", requiresUser, getDepartmentHandler);
 
     // Delete a department
     app.delete(

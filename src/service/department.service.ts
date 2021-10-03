@@ -3,15 +3,17 @@ import
     DocumentDefinition,
     FilterQuery, QueryOptions, UpdateQuery
 } from "mongoose";
+import { nanoid } from "nanoid";
 import Department, { DepartmentDocument } from "../model/department.model";
 
-export function getDepartments()
+export function getDepartments(query: FilterQuery<DepartmentDocument>)
 {
-    return Department.find();
+    return Department.find(query);
 }
 
 export function createDepartment(input: DocumentDefinition<DepartmentDocument>)
 {
+    input.departmentId = nanoid(10);
     return Department.create(input);
 }
 

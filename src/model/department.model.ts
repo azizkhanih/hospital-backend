@@ -5,6 +5,7 @@ import { UserDocument } from "./user.model";
 export interface DepartmentDocument extends Document
 {
     user: UserDocument["_id"];
+    departmentId: string;
     departmentInfo: DepartmentInfo;
     departmentContactPerson: DepartmentContactPerson;
     createdAt: Date;
