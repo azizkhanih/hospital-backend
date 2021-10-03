@@ -42,7 +42,7 @@ export async function invalidateUserSessionHandler(req: Request, res: Response)
 
     await updateSession({ _id: sessionId }, { valid: false });
 
-    return res.sendStatus(200);
+    return res.send(true);
 }
 
 export async function getUserSessionsHandler(req: Request, res: Response)
