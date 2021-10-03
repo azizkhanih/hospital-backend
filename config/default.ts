@@ -1,7 +1,8 @@
 export default {
-    port: 3000,
+    port: 4400,
     host: "localhost",
     dbUri: "mongodb://localhost:27017/hospital",
+    allowedOrigin: "http://localhost:4200",
     saltWorkFactor: 10,
     accessTokenTtl: "15m",
     refreshTokenTtl: "1y",
